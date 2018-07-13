@@ -72,7 +72,7 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   holiday_hash.map do |parent_key, parent_value|
     parent_value.map do |child_key, child_value|
-      return child_key if child_value.include?("BBQ")
+      child_key if child_value.include?("BBQ")
     end 
   end.flatten.compact
 end
